@@ -4,4 +4,6 @@ const characters = ['Flash', 'Superman', 'Batman'];
 
 const [, , batman] = characters;
 
-console.log(batman);
+module.exports = {
+    characters
+}

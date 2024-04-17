@@ -35,4 +35,7 @@ function buildLogger(service) {
 	};
 };
 
-module.exports = buildLogger;
+module.exports = {
+	buildLogger,
+	logger
+};
