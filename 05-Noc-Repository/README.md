@@ -11,3 +11,6 @@ MAILER_EMAIL=
 MAILER_SECRET_KEY=
 ENVIRONMENT=
 ```
+
+3. Ejecutar el comando ```npm install```
+4. Ejecutar ```npm run dev```

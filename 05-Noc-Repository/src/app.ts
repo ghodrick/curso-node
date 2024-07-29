@@ -1,3 +1,4 @@
+import { Server } from "./modules/presentation/server";
 
 
 (async () => {
@@ -5,7 +6,6 @@
 })();
 
 function main() {
-	//console.log(envs)
 
-	//Server.start();
+	Server.start();
 }
