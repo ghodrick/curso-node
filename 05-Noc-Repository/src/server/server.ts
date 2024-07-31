@@ -1,6 +1,6 @@
-import { EmailService } from "../../libraries/email/email.service";
-import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource";
-import { LogRepositoryImpl } from "../infrastructure/repository/log.repository.impl";
+import { EmailService } from "../libraries/email/email.service";
+import { FileSystemDatasource } from "../modules/logs/infrastructure/datasources/file-system.datasource";
+import { LogRepositoryImpl } from "../modules/logs/infrastructure/repository/log.repository.impl";
 
 const logRepository = new LogRepositoryImpl(new FileSystemDatasource());
 

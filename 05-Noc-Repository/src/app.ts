@@ -1,4 +1,4 @@
-import { Server } from "./modules/presentation/server";
+import { Server } from "./server/server";
 
 
 (async () => {
