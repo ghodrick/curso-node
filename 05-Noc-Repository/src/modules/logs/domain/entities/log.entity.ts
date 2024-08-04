@@ -22,6 +22,9 @@ export class LogEntity {
 	}
 
 	static fromJSON = (json: string): LogEntity => {
+
+		json = json === "" ? "{}" : json;
+
 		const { message, level, createdAt, origin } = JSON.parse(json);
 
 		if (!message && !level && !createdAt) {
@@ -36,5 +39,11 @@ export class LogEntity {
 		});
 
 		return log;
+	};
+	//Esto lo suyo es tenerlo en un mapper.
+	static fromObject = (object: { [key: string]: any }): LogEntity => {
+		const { message, level, createdAt, origin } = object;
+
+		return new LogEntity({ message, level, createdAt, origin });
 	};
 }

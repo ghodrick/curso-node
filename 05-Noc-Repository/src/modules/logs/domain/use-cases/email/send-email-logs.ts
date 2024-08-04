@@ -47,7 +47,7 @@ export class SendEmailLogs implements SendLogEmailUseCase {
 		return devolver;
 	}
 
-	prepareEmailContent = () => {
+	private prepareEmailContent = () => {
 		const subject = "Logs del servidor";
 
 		const htmlBody = `

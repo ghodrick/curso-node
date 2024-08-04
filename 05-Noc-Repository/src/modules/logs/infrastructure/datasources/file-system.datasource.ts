@@ -62,7 +62,23 @@ export class FileSystemDatasource implements LogDatasource {
 
 		const content = fs.readFileSync(archivoLeer, 'utf-8');
 
-		return content.split("\n").map(log => LogEntity.fromJSON(log));
+		if (content === '')
+		{
+			return [];
+		}
+
+		let devolver: LogEntity[] = [];
+
+		content.split("\n").forEach(log => {
+
+			if (log !== "")
+			{
+				devolver.push(LogEntity.fromJSON(log));
+			}
+
+		})
+
+		return devolver;
 
 	}
 }
