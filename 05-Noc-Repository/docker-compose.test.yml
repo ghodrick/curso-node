@@ -6,7 +6,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
     volumes:
-      - ./docker/dev/mongo:/data/db
+      - ./docker/testing/mongo:/data/db
     ports:
       - 27017:27017
   postgres-db:
@@ -17,7 +17,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
-      - ./docker/dev/postgres:/var/lib/postgresql/data
+      - ./docker/testing/postgres:/var/lib/postgresql/data
     ports:
       - 5432:5432
     

@@ -6,3 +6,4 @@ vscode
 .env
 docker/
 .idea/
+coverage/
