@@ -19,4 +19,9 @@ export class MongoLogDatasource implements LogDatasource {
         return logEntities;
     }
 
+    async getLogsById(id: string): Promise<LogEntity | null> {
+        const log = await LogModel.findById(id);
+        return log ? LogEntity.fromObject(log) : null;
+    }
+
 }
