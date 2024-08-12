@@ -1,5 +1,6 @@
 import { LogEntity } from "../../../../../../src/modules/logs/domain/entities/log.entity";
 import { CheckServiceMultiple } from "./../../../../../../src/modules/logs/domain/use-cases/checks/check-service-multiple";
+
 describe("check-service", () => {
 	const mockRepository = [
 		{
