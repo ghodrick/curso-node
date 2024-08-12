@@ -11,7 +11,8 @@ describe("SendEmailLogs", () => {
 
     const mockRepository: LogRepository = {
         saveLog: jest.fn().mockReturnValue(true),
-        getLogs: jest.fn()
+        getLogs: jest.fn(),
+        getLogsById: jest.fn()
     }
 
     beforeEach(() => {

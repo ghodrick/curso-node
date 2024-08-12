@@ -6,10 +6,12 @@ describe("check-service", () => {
 		{
 			saveLog: jest.fn(),
 			getLogs: jest.fn(),
+			getLogsById: jest.fn(),
 		},
         {
             saveLog: jest.fn(),
             getLogs: jest.fn(),
+            getLogsById: jest.fn(),
         }
 	];
 

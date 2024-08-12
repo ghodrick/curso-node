@@ -6,6 +6,7 @@ describe("check-service", () => {
     const mockRepository = {
         saveLog: jest.fn(),
         getLogs: jest.fn(),
+        getLogsById: jest.fn(),
     }
 
     const successCallback = jest.fn();

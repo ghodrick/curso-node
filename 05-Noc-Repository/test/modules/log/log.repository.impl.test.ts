@@ -4,7 +4,8 @@ describe('LogRepository', () => {
 
     const mockDatasource = {
         saveLog: jest.fn(),
-        getLogs: jest.fn()
+        getLogs: jest.fn(),
+        getLogsById: jest.fn()
     }
 
     const logRepository = new LogRepositoryImpl(mockDatasource);

@@ -1,9 +1,7 @@
-import { CronService } from "../libraries/cron/cron.service";
 import { FileSystemDatasource } from '../modules/logs/infrastructure/datasources/file-system.datasource';
 import { MongoLogDatasource } from '../modules/logs/infrastructure/datasources/mongo-log.datasource';
 import { PostgresLogDatasource } from "../modules/logs/infrastructure/datasources/postgre-log.datasource";
 import { LogRepositoryImpl } from "../modules/logs/infrastructure/repository/log.repository.impl";
-import { CheckServiceMultiple } from './../modules/logs/domain/use-cases/checks/check-service-multiple';
 
 const fsLogRepository = new LogRepositoryImpl(
 	new FileSystemDatasource()
@@ -29,16 +27,16 @@ export class Server {
 
 		console.log(logs) */
 
-		CronService.createJob("*/5 * * * * *", () => {
-			const url = "https://valkysaurios.vercel.app";
+		// CronService.createJob("*/5 * * * * *", () => {
+		// 	const url = "https://valkysaurios.vercel.app";
 
-			const logRepositoryUsar = [
-				PostgresLogRepository,
-				MongoLogRepository,
-				fsLogRepository
-			]
+		// 	const logRepositoryUsar = [
+		// 		PostgresLogRepository,
+		// 		MongoLogRepository,
+		// 		fsLogRepository
+		// 	]
 
-			new CheckServiceMultiple(logRepositoryUsar).execute(url);
-		});
+		// 	new CheckServiceMultiple(logRepositoryUsar).execute(url);
+		// });
 	}
 }

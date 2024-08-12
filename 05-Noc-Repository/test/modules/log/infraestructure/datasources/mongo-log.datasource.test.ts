@@ -52,4 +52,10 @@ describe("Mongo", () => {
         expect(logs[0].level).toBe('low');
 
 	});
+
+	test("Debe obtener un log null por id", async () => {
+		const log = await logDatasource.getLogsById("66b9f49557a94362146da22b");
+
+		expect(log).toBeNull();
+	});
 });

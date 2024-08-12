@@ -48,7 +48,7 @@ export class PostgresLogDatasource implements LogDatasource {
 
     async getLogsById(id: string): Promise<LogEntity | null> {
         const log = await prismaClient.logModel.findUnique({
-            where: { id }
+            where: { id: Number(id) }
         });
 
         if (!log) return null;
@@ -56,8 +56,6 @@ export class PostgresLogDatasource implements LogDatasource {
         const dataLog = {
             ...log
         }
-
-        //TODO: Arreglar problema con el enum del Level.
 
         return LogEntity.fromObject(dataLog);
     }
